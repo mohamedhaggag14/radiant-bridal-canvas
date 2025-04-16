@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { HERO_BACKGROUND_IMAGE } from "@/constants/images";
 
 export default function HeroSection() {
   return (
@@ -22,7 +23,7 @@ export default function HeroSection() {
       
       <div className="absolute right-0 top-0 bottom-0 w-full md:w-[40%] bg-cover bg-center opacity-90" 
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1611175140153-bfd26338ff0d?q=80&w=1374&auto=format&fit=crop')", 
+          backgroundImage: `url('${HERO_BACKGROUND_IMAGE}')`, 
           filter: "sepia(0.2)",
           backgroundPosition: "center 30%"
         }}>

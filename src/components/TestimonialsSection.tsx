@@ -1,29 +1,19 @@
 
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useState } from "react";
+import { TESTIMONIAL_IMAGES, PORTFOLIO_IMAGES, FEATURED_LOGOS } from "@/constants/images";
 
 const testimonials = [
   {
     quote: "5 hours of dancing, 2 outfit changes, and 400+ photos later, my makeup looked as fresh as when Safaa applied it. The best investment of my entire wedding.",
     name: "Amina R., Zamalek Wedding, October 2024",
-    image: "https://images.unsplash.com/photo-1590816801762-d71a45697402?w=300&h=300&fit=crop&auto=format"
+    image: TESTIMONIAL_IMAGES.AMINA
   },
   {
     quote: "My mother cried when she saw me. My husband was speechless. And I felt more beautiful than I ever have. Safaa didn't just meet my expectations—she transformed them.",
     name: "Fatma S., Four Seasons Nile Plaza Wedding, July 2024",
-    image: "https://images.unsplash.com/photo-1611601147557-bcb6cf72248b?w=300&h=300&fit=crop&auto=format"
+    image: TESTIMONIAL_IMAGES.FATMA
   }
-];
-
-const portfolioImages = [
-  "https://images.unsplash.com/photo-1580255803921-d4e60338643a?w=500&h=500&fit=crop",
-  "https://images.unsplash.com/photo-1512257639384-2dab4d1b29cf?w=500&h=500&fit=crop",
-  "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=500&h=500&fit=crop",
-  "https://images.unsplash.com/photo-1593157439730-838391c0abc5?w=500&h=500&fit=crop",
-  "https://images.unsplash.com/photo-1527799067158-4fc03c5856a7?w=500&h=500&fit=crop",
-  "https://images.unsplash.com/photo-1562667429-e9bef508dbfe?w=500&h=500&fit=crop",
-  "https://images.unsplash.com/photo-1590416839008-88222504f464?w=500&h=500&fit=crop",
-  "https://images.unsplash.com/photo-1618453292459-53424b66bb6a?w=500&h=500&fit=crop"
 ];
 
 export default function TestimonialsSection() {
@@ -32,13 +22,13 @@ export default function TestimonialsSection() {
   
   const nextImages = () => {
     setCurrentImageIndex((prev) => 
-      prev + visibleImages >= portfolioImages.length ? 0 : prev + visibleImages
+      prev + visibleImages >= PORTFOLIO_IMAGES.length ? 0 : prev + visibleImages
     );
   };
   
   const prevImages = () => {
     setCurrentImageIndex((prev) => 
-      prev - visibleImages < 0 ? Math.max(0, portfolioImages.length - visibleImages) : prev - visibleImages
+      prev - visibleImages < 0 ? Math.max(0, PORTFOLIO_IMAGES.length - visibleImages) : prev - visibleImages
     );
   };
   
@@ -100,7 +90,7 @@ export default function TestimonialsSection() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {portfolioImages
+            {PORTFOLIO_IMAGES
               .slice(currentImageIndex, currentImageIndex + visibleImages)
               .map((image, index) => (
                 <div key={index} className="aspect-square overflow-hidden rounded-sm">
@@ -114,7 +104,7 @@ export default function TestimonialsSection() {
           </div>
           
           <div className="flex justify-center mt-4 gap-1">
-            {Array.from({ length: Math.ceil(portfolioImages.length / visibleImages) }).map((_, i) => (
+            {Array.from({ length: Math.ceil(PORTFOLIO_IMAGES.length / visibleImages) }).map((_, i) => (
               <button 
                 key={i}
                 className={`w-2 h-2 rounded-full ${currentImageIndex / visibleImages === i ? 'bg-gildedGold' : 'bg-duskyRose bg-opacity-50'}`}
@@ -127,21 +117,21 @@ export default function TestimonialsSection() {
         <div className="mt-8 flex flex-wrap justify-center items-center gap-6">
           <div className="h-[40px] opacity-70">
             <img 
-              src="https://placeholder.pics/svg/120x40/DEDEDE/555555/PASHION" 
+              src={FEATURED_LOGOS.PASHION} 
               alt="Pashion Magazine"
               className="h-full"
             />
           </div>
           <div className="h-[40px] opacity-70">
             <img 
-              src="https://placeholder.pics/svg/120x40/DEDEDE/555555/ENIGMA" 
+              src={FEATURED_LOGOS.ENIGMA} 
               alt="Enigma Magazine"
               className="h-full"
             />
           </div>
           <div className="h-[40px] opacity-70">
             <img 
-              src="https://placeholder.pics/svg/160x40/DEDEDE/555555/CAIRO%20WEDDING%20GUIDE" 
+              src={FEATURED_LOGOS.CAIRO_WEDDING_GUIDE} 
               alt="Cairo Wedding Guide"
               className="h-full"
             />
