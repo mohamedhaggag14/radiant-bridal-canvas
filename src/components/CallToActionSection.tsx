@@ -1,9 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 
 export default function CallToActionSection() {
   return (
-    <section className="bg-deepBurgundy py-10 md:py-16 relative overflow-hidden">
+    <section id="cta" className="bg-deepBurgundy py-10 md:py-16 relative overflow-hidden">
       <div className="max-w-[800px] mx-auto px-5 text-center relative z-10">
         <h2 className="font-cormorant font-semibold text-2xl md:text-[36px] leading-[1.2] tracking-[0.5px] text-softWhite">
           Only 3 Premium Wedding Dates Remain This Season

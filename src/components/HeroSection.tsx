@@ -3,8 +3,15 @@ import { Button } from "@/components/ui/button";
 import { HERO_BACKGROUND_IMAGE } from "@/constants/images";
 
 export default function HeroSection() {
+  const handleCtaClick = () => {
+    const ctaSection = document.getElementById("cta");
+    if (ctaSection) {
+      ctaSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="bg-warmIvory py-20 md:py-[80px] relative overflow-hidden">
+    <section id="hero" className="bg-warmIvory py-20 md:py-[80px] relative overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-5 md:px-[5%] relative z-10">
         <div className="flex flex-col items-center md:items-start md:max-w-[650px]">
           <h1 className="font-cormorant font-semibold text-3xl md:text-[48px] leading-[1.2] tracking-[0.5px] text-deepBurgundy text-center md:text-left max-w-[650px]">
@@ -15,7 +22,10 @@ export default function HeroSection() {
             Cairo's most discerning brides trust Safaa for flawless makeup that lasts from first look to final dance.
           </p>
           
-          <Button className="mt-8 bg-gildedGold text-charcoal hover:bg-deepBurgundy hover:text-softWhite uppercase font-semibold px-8 py-8 rounded-[2px] shadow-md w-full md:w-auto font-nunito">
+          <Button 
+            onClick={handleCtaClick}
+            className="mt-8 bg-gildedGold text-charcoal hover:bg-deepBurgundy hover:text-softWhite uppercase font-semibold px-8 py-8 rounded-[2px] shadow-md w-full md:w-auto font-nunito"
+          >
             Secure your wedding date now
           </Button>
         </div>

@@ -1,4 +1,3 @@
-
 import { Clock, Palette, Feather, Camera } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -28,7 +27,7 @@ function BenefitItem({ icon, title, description }: BenefitProps) {
 
 export default function BenefitsSection() {
   return (
-    <section className="bg-warmIvory py-10 md:py-16">
+    <section id="benefits" className="bg-warmIvory py-10 md:py-16">
       <div className="max-w-[1200px] mx-auto px-5 md:px-[5%]">
         <h2 className="font-cormorant font-semibold text-2xl md:text-[36px] leading-[1.2] tracking-[0.5px] text-charcoal text-center md:text-left">
           The Safaa Difference: Flawless From First Light to Last Dance

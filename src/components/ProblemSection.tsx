@@ -1,9 +1,8 @@
-
 import { Clock, Droplet, Camera } from "lucide-react";
 
 export default function ProblemSection() {
   return (
-    <section className="bg-duskyRose bg-opacity-15 py-10 md:py-16 relative overflow-hidden">
+    <section id="problem" className="bg-duskyRose bg-opacity-15 py-10 md:py-16 relative overflow-hidden">
       <div className="max-w-[800px] mx-auto px-5 text-center relative z-10">
         <h2 className="font-cormorant font-semibold text-2xl md:text-[36px] leading-[1.2] tracking-[0.5px] text-charcoal">
           Your Wedding Photos Will Last Forever... Will Your Makeup?

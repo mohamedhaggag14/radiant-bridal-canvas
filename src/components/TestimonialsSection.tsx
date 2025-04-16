@@ -1,4 +1,3 @@
-
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useState } from "react";
 import { TESTIMONIAL_IMAGES, PORTFOLIO_IMAGES, FEATURED_LOGOS } from "@/constants/images";
@@ -33,7 +32,7 @@ export default function TestimonialsSection() {
   };
   
   return (
-    <section className="bg-softWhite py-10 md:py-16">
+    <section id="testimonials" className="bg-softWhite py-10 md:py-16">
       <div className="max-w-[1200px] mx-auto px-5 md:px-[5%]">
         <h2 className="font-cormorant font-semibold text-2xl md:text-[36px] leading-[1.2] tracking-[0.5px] text-charcoal text-center mb-8">
           Cairo's Elite Brides Choose Safaa

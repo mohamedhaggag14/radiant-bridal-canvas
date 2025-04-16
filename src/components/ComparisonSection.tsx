@@ -1,7 +1,6 @@
-
 export default function ComparisonSection() {
   return (
-    <section className="bg-duskyRose bg-opacity-10 py-10 md:py-16">
+    <section id="comparison" className="bg-duskyRose bg-opacity-10 py-10 md:py-16">
       <div className="max-w-[1200px] mx-auto px-5">
         <h2 className="font-cormorant font-semibold text-2xl md:text-[36px] leading-[1.2] tracking-[0.5px] text-charcoal text-center">
           Why Most Cairo Brides Leave Disappointed (And Why You Won't)

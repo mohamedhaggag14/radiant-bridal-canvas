@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
@@ -62,7 +61,7 @@ export default function FaqSection() {
   };
   
   return (
-    <section className="bg-warmIvory py-10 md:py-16">
+    <section id="faq" className="bg-warmIvory py-10 md:py-16">
       <div className="max-w-[800px] mx-auto px-5">
         <h2 className="font-cormorant font-semibold text-2xl md:text-[36px] leading-[1.2] tracking-[0.5px] text-charcoal text-center mb-6">
           Your Questions, Answered
