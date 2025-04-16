@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for Safaa Kandil Makeup Artist
+				warmIvory: '#F5F1E8',
+				deepBurgundy: '#702E35',
+				deepTaupe: '#7A6C5D',
+				gildedGold: '#D9B96F',
+				charcoal: '#3A3535',
+				duskyRose: '#C49A9A',
+				softWhite: '#FDFBF7',
+				richClay: '#9E7A6A',
+			},
+			fontFamily: {
+				cormorant: ['"Cormorant Garamond"', 'serif'],
+				nunito: ['"Nunito Sans"', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
